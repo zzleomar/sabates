@@ -1,17 +1,25 @@
 var express = require("express");
 
-var app= express();
-app.use(express.static('public'));
-app.use(express.static('assets'));
+var user = require('./routes/user');
+var http = require('http');
+var path = require('path');
 
+var app= express();
+
+app.set('port', process.env.PORT || 8090);
+app.set("views",path.join(__dirname, 'views'));
 app.set("view engine","jade");
 
-app.get("/",function(req,res){
-	res.render("index");
-});
+app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'assets')));
+app.use(app.router);
+app.use(express.bodyParse());
 
-app.get("/login",function(req,res){
-	res.render("login");
-});
+if('development' == app.get('env')){
+	app.use(express.errorHandler());
+}
 
-app.listen(8090);
+require('./routes')(app);
+http.createServer(app).listen(app.get('port'),function(){
+	console.log('Express server listening on port '+ app.get('port'));
+});

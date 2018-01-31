@@ -1,0 +1,76 @@
+// START BREADCRUMB
+ul.breadcrumb
+  li
+    a(href='#') Tabla de Referencia
+  li
+    a(href='#') Plan de Cuenta de Ingresos
+  li.active Registrar Específica
+// END BREADCRUMB
+#mb-remove-row.message-box.animated.fadeIn(data-sound='alert')
+  // MESSAGE DELETE
+  .mb-container
+    .mb-middle
+      .mb-title
+        span.fa.fa-times
+        |  Eliminar 
+        strong Data
+        |  ?
+      .mb-content
+        p Esta usted seguro de eliminar esta Específica?
+        p Presina SI esta seguro.
+      .mb-footer
+        .pull-right
+          button.btn.btn-success.btn-lg.mb-control-yes Si
+          button.btn.btn-default.btn-lg.mb-control-close No
+  // END MESSAGE DELETE
+.page-content-wrap
+  .row
+    .col-md-12
+      // START DEFAULT DATATABLE
+      .panel.panel-default
+        .panel-heading
+          h3.panel-title Registro de  Específicas
+        form.form-horizontal
+          h3
+            label.col-md-7.control-label Código Presupuestario
+          .col-md-6.panel.panel-default.tabs
+            .col-md-6.panel-body.tab-content
+              .form-group
+                .col-md-1
+                  h5
+                    | Cuenta
+                  input.form-control(type='text', disabled='', value='3')
+                .col-md-1
+                  h5
+                    | Ramo
+                  select.form-control.select
+                    option(selected='selected') 01
+                    option 02
+                    option 03
+                    option 04
+                    option 05
+                .col-md-1
+                  h5
+                    | Sub-Ramo
+                  select.form-control.select
+                    option(selected='selected') 01
+                    option 02
+                    option 03
+                    option 04
+                    option 05
+                .col-md-1
+                  h5
+                    | Específica
+                  input.form-control(type='text', placeholder='00')
+                .col-md-7
+                  h5
+                    | Descripción
+                  input.form-control(type='text', placeholder='Descripción de Acuerdo Código Presupuestario')
+                .col-md-1
+                  h5 Estatus
+                  input.form-control(type='text', name='status', placeholder='Estatus')
+            .panel-footer
+              button.btn.btn-primary.pull-right
+                a(href='#') Guardar
+                span.fa.fa-floppy-o.fa-right
+// PAGE CONTENT WRAPPER

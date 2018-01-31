@@ -1,0 +1,94 @@
+
+<!DOCTYPE html><html lang="es">
+    <head>
+        <title> SABATES </title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link href="css/icons.css">
+        <link href="css/materealize.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <style type="text/css">
+                        body{
+                                background-color: #e0e0e0;
+
+            }
+                        #l-login {
+                background-image: url("img/tributo2.jpg");
+
+            }
+
+        </style>
+    </head>
+    <body id="cas" class="login">
+        <main id="container" class="container">
+            <center>
+                <section id="section-login" class="flex flex-center">
+                    <div id="content">
+                        <div class="row">
+                            <div class="col xl12 s12 m12 l12 row-login">
+                                <div class="box row" id="login" style="margin-bottom: 0px">
+                                    <div class="login-header" id="l-login">
+                               
+                                        <div id="login-header-logo"><h1>SABATES</h1></div>
+                         
+                                        <div id="login-header-title">
+                                            <p><i>Los impuestos son el precio que pagamos</i></p>
+                                            <p><i>por una sociedad civilizada</i></p>
+                                        </div>
+                                
+                                        <div class="bg"></div>
+                                    </div>
+                                    <div id="r-login">
+                                        <form method="post" id="fm1" action="/login_check">
+                                            <div class="row" style="padding-left: 10px">
+                                                <div class="col-s12">
+                                                    <span><b><i><center>Sistemas Autónomo Bolivariano de Administración Tributaria del Estado Sucre</center></i></b></span>
+                                                </div>
+                                            
+                                            </div>
+                                            <section class="row" style="margin-top: 100px;">
+                                                <div class="input-field col s12">
+                                                    <input type="text" id="username" name="_username" value=""/>
+                                                    <label for="_username"><span class="accesskey">Usuario:</label>
+                                                        <div class="clap-text">
+                                                            error colocar usuario
+                                                        </div>
+                                                </div>
+                                            </section>
+                                            <section class="row">
+                                                <div class="input-field col s12">
+                                                    <input type="password" id="password" name="_password" />
+                                                    <label for="_password"><span class="accesskey">C</span>ontraseña:</label>
+                                                    <div class="clap-text">
+                                                         error colocar contraseña
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="row btn-row row-password">
+                                                <div class="input-field col s6" >
+                                                    
+                                                    <a href="recuperar.html" class="clap-text">
+                                                        ¿Olvidó su Contraseña?
+                                                    </a>
+                                                </div>
+                                            </section>
+                                            <section class="row btn-row" style="padding-bottom:0px;padding-top: 5px">
+                                                <div class="btn-enter input-field col s6" >
+                                                
+                                                    <a class="btn btn-medium waves-effect waves-light" onclick="Materialize.toast('Usuario o Contraseña Invalido', 4000)">Entrar</a>
+                                                </div>
+                                            </section>
+
+                           
+                    </div>
+                </section>
+            </center>
+        </main>
+    </body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+</html>
+

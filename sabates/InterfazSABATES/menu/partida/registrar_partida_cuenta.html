@@ -1,0 +1,90 @@
+
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Tabla de Referencia</a></li>                    
+                    <li><a href="#">Plan de Cuenta de Ingresos</a></li>
+                    <li class="active">Registro de Cuenta</li>
+                </ul>
+                <!-- END BREADCRUMB -->
+                <div class="page-content-wrap">
+    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- START DEFAULT DATATABLE -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">                                
+                                   <h3 class="panel-title">Registro de Cuenta</h3>
+                                </div>   
+                                <form class="form-horizontal">
+                                     <h3><label class="col-md-7 control-label">Código Presupuestario</label></h3>                       
+                                <div class="col-md-6 panel panel-default tabs">                            
+                                      
+                                    <div class="col-md-12 panel-body tab-content">
+                                   
+                                            <div class="form-group">
+                                             <div class="col-md-1">
+                                                 <h5>Cuenta
+                                                    </h5>   
+                                                    <input id="input-account" type="text"  name="codigo" class="form-control" Placeholder="# Cuenta" maxlength="2" /> 
+                                                    <span id="error-account" class="text-danger hide">Debe ingresar una cuenta</span>  
+                                                    <span id="error-exist-account" class="text-danger hide">La cuenta ya se encuentra registrada</span> 
+                                                    <span id="error-inval-account" class="text-danger hide">La cuenta es invalida</span> 
+                                                </div>
+                                                <div class="col-md-7">
+                                                <h5>Descripción</h5>
+                                                    <input id="input-description" type="text" name="descripcion" class="form-control" Placeholder="Descripción de Acuerdo Código Presupuestario"/>
+                                                    <span id="error-description" class="text-danger hide">Debe ingresar una descripción</span> 
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <h5>
+                                                    Estatus</h5>
+                                                    <select id="select-status" class="form-control select">
+                                                     <!--   <option value='0' selected="selected">Seleccione el estatus</option>-->
+                                                        <option selected="selected" value='1'>Activo</option> 
+                                                        <option value='2'>Inactivo</option> 
+                                                    </select>
+                                                    <span id="error-status" class="text-danger hide">Debe seleccionar un estatus</span> 
+                                                </div>      
+                                            </div>
+                                        </div>
+                                    <div class="panel-footer">                      
+                                        <button class="btn btn-danger mb-control pull-right" data-box="#message-box" id="btn-account"><a>Guardar</a><span class="fa fa-floppy-o fa-right"></span></button>
+                                    </div>
+                                    <div class="message-box animated fadeIn" data-sound="alert" id="message-box">
+                                        <div class="mb-container">
+                                            <div class="mb-middle">
+                                                <div class="mb-title"><span class="fa fa-question"></span><strong>Confirmación</strong></div>
+                                                    <div class="mb-content">
+                                                        <p>¿Esta seguro del registro de los datos de la cuenta?</p>           
+                                                    </div>
+                                                    <div class="mb-footer">
+                                                        <div class="pull-right">
+                                                            <button class="btn btn-success btn-lg mb-control" data-box="#message-box-success" id="btn-aceptar">Aceptar</button>
+                                                            <button class="btn btn-default btn-lg mb-control-close">Cancelar</button>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                    <div class="message-box animated fadeIn" id="message-box-success">
+                                        <div class="mb-container">
+                                            <div class="mb-middle">
+                                                <div class="mb-title"><span class="fa fa-info"></span><strong>Registro</strong></div>
+                                                    <div class="mb-content">
+                                                        <p>Cuenta registrada exitosamente</p>  
+                                                    </div> 
+                                                    <div class="mb-footer">
+                                                        <a class="btn btn-success btn-lg pull-right" href="lista_cuenta.php">OK</a>
+                                                    </div>
+                                            </div>
+                                        </div>  
+                                    </div>                   
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="js/javascripts/complement-account.js"></script>
+ 

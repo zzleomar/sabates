@@ -1,0 +1,58 @@
+ul.breadcrumb
+  li
+    a(href='#') Tabla de Referencia
+  li
+    a(href='#') Plan de Cuenta de Ingresos
+  li.active Subramo
+// END BREADCRUMB
+#mb-remove-row.message-box.animated.fadeIn(data-sound='alert')
+  // MESSAGE DELETE
+  .mb-container
+    .mb-middle
+      .mb-title
+        span.fa.fa-times
+        |  Eliminar 
+        strong Data
+        |  ?
+      .mb-content
+        p Esta usted seguro de eliminar esta Subramo?
+        p Presina SI esta seguro.
+      .mb-footer
+        .pull-right
+          button.btn.btn-success.btn-lg.mb-control-yes Si
+          button.btn.btn-default.btn-lg.mb-control-close No
+  // END MESSAGE DELETE
+.page-content-wrap
+  .row
+    .col-md-12
+      // START DEFAULT DATATABLE
+      .panel.panel-default
+        .panel-heading
+          h3.panel-title Subramo Registradas
+          ul.panel-controls
+            li
+              button.btn.btn-primary(type='button')
+                a(href='register_subbouquet.jade') Registrar
+        .panel-body
+          table.table.datatable
+            thead
+              tr
+                th(width='100') Cuenta
+                th(width='100') Ramo
+                th(width='100') Sub-Ramo
+                th Descripción
+                th(width='100') Estatus
+                th(width='150') Acción
+            tbody
+              tr
+                td.text-center 3
+                td.text-center 01
+                td.text-center 01
+                td Impuesto sobre la renta a personas jurídicas
+                td
+                  span.label.label-success Activo
+                td
+                  button.btn.btn-default
+                    i.fa.fa-edit
+                  button.btn.btn-danger(onclick="delete_row('trow_3');")
+                    i.glyphicon.glyphicon-trash

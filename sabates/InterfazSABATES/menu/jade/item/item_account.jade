@@ -1,0 +1,54 @@
+ul.breadcrumb
+  li
+    a(href='#') Tabla de Referencia
+  li
+    a(href='#') Plan de Cuenta de Ingresos
+  li.active Partida Cuenta
+// END BREADCRUMB
+#mb-remove-row.message-box.animated.fadeIn(data-sound='alert')
+  // MESSAGE DELETE
+  .mb-container
+    .mb-middle
+      .mb-title
+        span.fa.fa-times
+        |  Eliminar 
+        strong Data
+        |  ?
+      .mb-content
+        p Esta usted seguro de eliminar esta Cuenta?
+        p Presina SI esta seguro.
+      .mb-footer
+        .pull-right
+          button.btn.btn-success.btn-lg.mb-control-yes Si
+          button.btn.btn-default.btn-lg.mb-control-close No
+  // END MESSAGE DELETE
+// PAGE CONTENT WRAPPER
+.row
+  .col-md-12
+    // START DEFAULT DATATABLE
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title Partidas Cuenta Registradas
+        ul.panel-controls
+          li
+            button.btn.btn-primary(type='button')
+              a(href='register_account.jade') Registrar
+      .panel-body
+        table.table.datatable
+          thead
+            tr
+              th(width='100') Cuenta
+              th Descripción
+              th(width='100') Estatus
+              th(width='150') Acción
+          tbody
+            tr(cuenta='trow_1')
+              td.text-center 1
+              td Activo
+              td
+                span.label.label-success Activo
+              td
+                button.btn.btn-default
+                  i.fa.fa-edit
+                button.btn.btn-danger(onclick="delete_row('trow_1');")
+                  i.glyphicon.glyphicon-trash

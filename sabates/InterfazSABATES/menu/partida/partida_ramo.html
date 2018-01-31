@@ -1,0 +1,65 @@
+                <ul class="breadcrumb">
+                    <li><a href="#">Tabla de Referencia</a></li>                    
+                    <li><a href="#">Plan de Cuenta de Ingresos</a></li>
+                    <li class="active">Ramo</li>
+                </ul>
+                <!-- END BREADCRUMB -->
+            <div class="message-box animated fadeIn" data-sound="alert" id="mb-remove-row">
+            <!--MESSAGE DELETE -->
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-times"></span> Eliminar <strong>Data</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Esta usted seguro de eliminar esta Ramo?</p>                    
+                        <p>Presina SI esta seguro.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <button class="btn btn-success btn-lg mb-control-yes">Si</button>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MESSAGE DELETE -->
+        </div>
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                           
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- START DEFAULT DATATABLE -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">                                
+                                   <h3 class="panel-title">Ramos Registrados</h3>
+                                    <ul class="panel-controls">
+                                            <li><button type="button" class="btn btn-primary"><a href="registrar_ramo.php">Registrar</a></button></li> 
+                                    </ul>   
+                                </div>   
+                                <div class="panel-body">
+                                    <table class="table datatable">
+                                        <thead>
+                                            <tr>
+                                                <th width="100">Cuenta</th>
+                                                <th width="100">Ramo</th>
+                                                <th>Descripción</th>
+                                                <th width="100">Estatus</th>
+                                                <th width="150">Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                               <td class="text-center">3</td>
+                                                <td class="text-center">01</td>
+                                                <td>Ingresos Ordinarios</td>
+                                                <td><span class="label label-success">Activo</span></td>
+                                                <td><button class="btn btn-default" class="button"><i class="fa fa-edit"></i></button><button class="btn btn-danger" onClick="delete_row('trow_1');"><i class="glyphicon glyphicon-trash"></i></button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+  
+                        </div>
+                    </div>
+                </div>

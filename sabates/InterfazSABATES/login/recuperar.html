@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>SABATES</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link href="css/icons.css" rel="stylesheet">
+            <link href="css/materealize.css" rel="stylesheet">
+            <link href="css/responsive.css" rel="stylesheet">
+           <!-- <link rel="stylesheet" type="text/css" href="css/dataTables.materialize.css">
+            <link rel="stylesheet" type="text/css" href="css/main.css">-->
+            
+</head>
+<body>
+    <div id="confirm" class="modal">
+        <div class="modal-content">
+            <h5>Confirmación</h5>
+            <p id="text-confirm"></p>
+        </div>
+        <div class="modal-footer">
+            <a id="btn-confirm-acept" href="javascript:void(0)" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+            <a href="javascript:void(0)" class="modal-action modal-close waves-effect waves-green btn-flat btn-confirm-close">Cancelar</a>
+        </div>
+    </div>
+    <style>
+        main {
+            flex: 1 0 auto;
+        }
+        .container {
+            max-width: 600px;
+        }
+        #solicitar {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+    </style>
+    <center>
+                <!--<a href="#"><h1 class="logo-patria">SABATES</h1></a>-->
+        <div class="container">
+            <div class="z-depth-1 white row">
+                <div class="clap col s12"><h5 class="white-text">Recuperar o Cambiar Contraseña</h5></div>
+                <div class="row" style="margin-bottom: 0px">
+                    <div class="col s12">
+                        <form id="registro-form" class="col s12" action="/recuperar/validar" method="POST" autocomplete="off">
+                            <div style="padding: 30px">
+                                                                <div class="row">
+                                    <div class="input-field col m6 s12">
+                                        <input id="username" name="username" type="text" class="validate" autocomplete="off" value="" required="true">
+                                        <label for="username">Usuario</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12 m6">
+                                        <label type="email">Email</label>
+                                        <input maxlength="11" autocomplete="off" class="text" name="phone" id="email" value="" type="text" required="true">
+                                    </div>
+                                    <div class="input-field col s2 m1 no-padding">
+                                        <button class="waves-effect waves-light btn tooltipped" data-position="top" type="button" id="solicitar" value="solicitar" data-delay="50" data-html="true" data-tooltip="<p style='max-width:300px; text-align:left;'>Al oprimir este botón un código de confimación le será enviado por correo especificado y debe colocarlo en el siguiente campo para poder recuperar su contraseña.</p>" data-tooltip-id="eedc7b82-072f-ac15-8ce9-13805b107c81"><i class="material-icons">send</i>
+                                        </button>
+                                    </div>
+                                    <div class="input-field col s10 m5">
+                                        <input maxlength="6" class="text confirmation" autocomplete="off" name="codigo" id="codigo" value="" type="text" required="true"> 
+                                        <label class="mandatory" for="codigo">Código Confirmación</label>
+                                    </div>
+                                </div>
+                                <div class="row">  
+                                    <div class="input-field col s12 m6">
+                                        <input class="text confirmation" autocomplete="off" name="password" id="password" value="" type="password" required="true"> 
+                                        <label class="mandatory" for="password">Nueva Contraseña</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <input class="text confirmation" autocomplete="off" name="rpassword" id="rpassword" value="" type="password" required="true"> 
+                                        <label class="mandatory" for="rpassword">Confirmar Contraseña</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row grey lighten-4" style="margin-bottom: 0px;height: 70px">
+                                <div class="form-actions col s12" style="padding-top: 18px">
+                                    <button type="submit" data-sitekey="6LddmiwUAAAAAMHKeuJziZfrNBg4OPNKUHfuq8Yy" data-callback="onSubmit"class="col s12 offset-m3 m6 btn btn-medium waves-effect patria g-recaptcha">Recuperar</button>
+                                </div>
+                            </div> 
+                            <input type="hidden" name="_csrf_token" value="0HMC0LKTecqYYqzYiTUflzjUa-uKwFk8G7vnvYagX6Y"/>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+    </center>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+doctype html
+html(lang='es')
+  head
+    // META SECTION
+    title SABATES
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon', href='img/logoico.ico', type='image/x-icon')
+    // END META SECTION
+    // CSS INCLUDE
+    link#theme(rel='stylesheet', type='text/css', href='css/theme-default.css')
+    // EOF CSS INCLUDE
+  body
+    // START PAGE CONTAINER
+    .page-container
+        include ./inclu/head.jade
+      // START PAGE SIDEBAR
+        include ./inclu/menu.jade
+      // END PAGE SIDEBAR
+      // PAGE CONTENT
+      .page-content
+          include ./inclu/menu_sup.jade
+          include ./item/item_specifies.jade
+      // END PAGE CONTAINER
+      // MESSAGE BOX
+      #mb-signout.message-box.animated.fadeIn(data-sound='alert')
+        .mb-container
+          .mb-middle
+            .mb-title
+              span.fa.fa-sign-out
+              | Cerrar 
+              strong Sesión
+              |  ?
+            .mb-content
+              p Estás seguro de cerrar sesión?
+              p Presione No para continuar trabajando. Presione Sí para salir del sistema.
+            .mb-footer
+              .pull-right
+                a.btn.btn-success.btn-lg(href='pages-login.html') Sí
+                button.btn.btn-default.btn-lg.mb-control-close No
+      .footer
+        include ./inclu/footer.jade
+      // END MESSAGE BOX
+      // START PRELOADS
+      audio#audio-alert(src='audio/alert.mp3', preload='auto')
+      audio#audio-fail(src='audio/fail.mp3', preload='auto')
+      // END PRELOADS
+      // START SCRIPTS
+      // START SCRIPTS
+      // START PLUGINS
+      script(type='text/javascript', src='js/plugins/jquery/jquery.min.js')
+      script(type='text/javascript', src='js/plugins/jquery/jquery-ui.min.js')
+      script(type='text/javascript', src='js/plugins/bootstrap/bootstrap.min.js')
+      // END PLUGINS
+      // THIS PAGE PLUGINS
+      script(type='text/javascript', src='js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js')
+      // END PAGE PLUGINS
+      // START TEMPLATE
+      script(type='text/javascript', src='js/plugins.js')
+      script(type='text/javascript', src='js/actions.js')
+      // END TEMPLATE
+      // END SCRIPTS

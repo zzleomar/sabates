@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SICCI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->  
+  <link rel="icon" type="image/png" href="../public/vendorLogin/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../public/vendorLogin/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../public/vendorLogin/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../public/vendorLogin/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../public/vendorLogin/animate/animate.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="../public/vendorLogin/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../public/vendorLogin/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../public/vendorLogin/select2/select2.min.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="../public/vendorLogin/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="../public/vendorLogin/css/util.css">
+  <link rel="stylesheet" type="text/css" href="../public/vendorLogin/css/main.css">
+<!--===============================================================================================-->
+<style type="text/css">
+	#l-login {
+    width: 100%;
+    height: 500px;
+    background: rgba(255,255,255,0.8);
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.8) 0%, rgba(77,77,77,0.2) 54%, rgba(51,51,51,0.13) 60%, rgba(0,0,0,0.29) 72%, rgba(0,0,0,0.66) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.8)), color-stop(54%, rgba(77,77,77,0.4)), color-stop(60%, rgba(51,51,51,0.29)), color-stop(72%, rgba(0,0,0,0.40)), color-stop(100%, rgba(0,0,0,0.80)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.8) 0%, rgba(77,77,77,0.2) 54%, rgba(51,51,51,0.13) 60%, rgba(0,0,0,0.29) 72%, rgba(0,0,0,0.66) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,0.8) 0%, rgba(77,77,77,0.2) 54%, rgba(51,51,51,0.13) 60%, rgba(0,0,0,0.29) 72%, rgba(0,0,0,0.66) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.8) 0%, rgba(77,77,77,0.2) 54%, rgba(51,51,51,0.13) 60%, rgba(0,0,0,0.29) 72%, rgba(0,0,0,0.66) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(77,77,77,0.4) 54%, rgba(51,51,51,0.20) 60%, rgba(0,0,0,0.40) 72%, rgba(0,0,0,0.80) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
+                background-image: url("../public/vendorLogin/images/tributo2.jpg");
+
+}
+.contenedorImagenInicio{
+	    width: 50%;
+    float: left;
+}
+.contenedorformInicio{
+	    width: 45%;
+    float: right;
+}
+#r-login:before{
+    content: " ";
+    width: 0;
+    height: 0;
+    left: -140px;
+    position: relative;
+    top: -63px;
+    border-style: solid;
+    border-width: 1px 0 636px 70px;
+    border-color: transparent transparent #ffffff transparent;
+    line-height: 0px;
+}
+</style>
+</head>
+<body>
+  
+  <div class="limiter">
+    <div class="container-login100">
+    	
+      <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
+      	<div class="contenedorImagenInicio">
+         <div class="login-header" id="l-login">
+            <div id="login-header-logo"><h1>SABATES</h1></div>
+            <div id="login-header-title">
+                <p><i>Los impuestos son el precio que pagamos</i></p>
+                <p><i>por una sociedad civilizada</i></p>
+            </div>
+    
+            <div class="bg"></div>
+        </div>
+      </div>
+          <form class="login100-form validate-form flex-sb flex-w contenedorformInicio" id="r-login" method="POST" action="{{ route('login') }}">
+          <span class="login100-form-title p-b-32">
+            Inicio de Sesión
+          </span>
+
+          <span class="txt1 p-b-11">
+            Nro. Cédula
+          </span>
+          <div class="wrap-input100 validate-input m-b-36" data-validate = "Ingrese su nro. Cédula">
+            <input class="input100" type="text" name="cedula" >
+            <span class="focus-input100"></span>
+            
+          </div>
+          
+          <span class="txt1 p-b-11">
+            Contraseña
+          </span>
+          <div class="wrap-input100 validate-input m-b-12" data-validate = "Ingrese su contraceña">
+            <span class="btn-show-pass">
+              <i class="fa fa-eye"></i>
+            </span>
+            <input class="input100" type="password" name="password" >
+            <span class="focus-input100"></span>
+           
+          </div>
+          
+          <div class="flex-sb-m w-full p-b-48">
+            <div class="contact100-form-checkbox">
+              <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+              <label class="label-checkbox100" for="ckb1">
+                Recuerdame
+              </label>
+            </div>
+
+            <div>
+              <a href="#" class="txt3">
+                ¿Olvido su contraseña?
+              </a>
+            </div>
+          </div>
+
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn">
+              Entrar 
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="dropDownSelect1"></div>
+  
+<!--===============================================================================================-->
+  <script src="../public/vendorLogin/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="../public/vendorLogin/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+  <script src="../public/vendorLogin/bootstrap/js/popper.js"></script>
+  <script src="../public/vendorLogin/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="../public/vendorLogin/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="../public/vendorLogin/daterangepicker/moment.min.js"></script>
+  <script src="../public/vendorLogin/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+  <script src="../public/vendorLogin/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+  <script src="../public/vendorLogin/js/main.js"></script>
+
+</body>
+</html>

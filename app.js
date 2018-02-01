@@ -1,34 +1,16 @@
+/*
+var express = require("express");
 
-/**
- * Module dependencies.
- */
+var app= express();
+app.use(express.static('public'));
+app.use(express.static('assets'));
 
-var express = require('express')
-  , routes = require('./routes')
-  , user = require('./routes/user')
-  , http = require('http')
-  , path = require('path');
+app.set("view engine","jade");
 
-var app = express();
 
-app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use( function(req, res, next){
-    app.locals.pretty = true
-    next()
-  });
-  app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
-});
 
-app.configure('development', function(){
-  app.use(express.errorHandler());
+app.get("/login",function(req,res){
+	res.render("login");
 });
 
 app.get('/', function(req,res) {
@@ -42,8 +24,52 @@ app.get('/narrow', function(req,res) { res.render("layouts/marketing-narrow")});
 app.get('/signin', function(req,res) { res.render("layouts/signin")});
 app.get('/starter', function(req,res) { res.render("layouts/starter-template")});
 app.get('/sticky', function(req,res) { res.render("layouts/sticky-footer")});
-app.get('/login', function(req,res) { res.render("personal/login")});
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+app.listen(8090);*/
+
+
+var http = require('http');
+var express = require('express');
+var routes = require('./routes');
+var user = require('./routes/user');
+var path = require('path');
+
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var methodOverride = require('method-override');
+var session = require('express-session');
+var bodyParser = require('body-parser');
+var multer = require('multer');
+var errorHandler = require('errorhandler');
+
+var app = express();
+
+// all environments
+app.set('port', process.env.PORT || 9080);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(logger('dev'));
+app.use(methodOverride());
+app.use(session({ resave: true,
+                  saveUninitialized: true,
+                  secret: 'uwotm8' }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(multer());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', routes.index);
+app.get("/login",function(req,res){
+  res.render("login");
+});
+
+// error handling middleware should be loaded after the loading the routes
+if ('development' == app.get('env')) {
+  app.use(errorHandler());
+}
+
+var server = http.createServer(app);
+server.listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
 });

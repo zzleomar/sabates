@@ -19,7 +19,6 @@ body {
     position: sticky;
     top: 48px;
     height: calc(100vh - 48px);
-    padding-top: .5rem;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -45,3 +44,102 @@ body {
     background-color: rgba(0, 0, 0, .25);
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
 }	
+
+.flex-column li.nav-item>.nav-link:hover {
+    background: #eee;
+}
+
+li.nav-item>.nav-link.active {
+    background: #eee;
+    color: #000;
+    font-weight: 800;
+    cursor: auto;
+}
+a.d-flex.align-items-center.text-muted{
+    cursor: auto;
+}
+.x-navigation > li.xn-profile {
+    padding: 0px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.x-navigation li {
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+.x-navigation > li.xn-profile .profile-mini {
+    display: none;
+    width: 50px;
+    padding: 7px;
+}
+
+.x-navigation li > a {
+    display: block;
+    float: left;
+    width: 100%;
+    line-height: 19px;
+    /* color: #4d90fe; */
+    color: #000000;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 15px 10px 15px 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+    vertical-align: text-bottom;
+}
+.profile {
+    width: 100%;
+    float: left;
+    padding: 15px 10px;
+    position: relative;
+    /* background: #121418; */
+    background: #2f353a;
+}
+.profile .profile-image {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 10px;
+    text-align: center;
+}
+.profile .profile-data {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.x-navigation > li.xn-profile .profile-data-name {
+    color: #ffffff;
+}
+
+.profile .profile-data .profile-data-name {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+}
+.profile .profile-data .profile-data-title {
+    width: 100%;
+    float: left;
+    font-size: 11px;
+    font-weight: 400;
+    color: #999;
+}
+.profile .profile-image img {
+    width: 100px;
+    border: 3px solid #FFF;
+    -moz-border-radius: 20%;
+    -webkit-border-radius: 20%;
+    border-radius: 20%;
+}
+.navbar-dark{
+    background: #292b2c;
+    padding-left: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 5px;
+}

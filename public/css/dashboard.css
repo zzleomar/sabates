@@ -1,12 +1,16 @@
 body {
     font-size: .875rem;
 }
+header.header.sticky-top{
+    padding-left: 0px; 
+    margin-left: 0px; 
+    height: 50px;
+}
   	.sidebar .nav-link {
 	    font-weight: 500;
 	    color: #333;
 	}
 	.sidebar {
-    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -15,12 +19,8 @@ body {
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 48px;
-    height: calc(100vh - 48px);
-    overflow-x: hidden;
-    overflow-y: auto;
+    margin-top: -10px;
+    height: calc(100vh - 41px);
 }
 .sidebar .nav-link.active {
     color: #007bff;
@@ -39,18 +39,18 @@ body {
 }
 .navbar-brand {
     padding-top: .75rem;
-    padding-bottom: .75rem;
     font-size: 1rem;
-    background-color: rgba(0, 0, 0, .25);
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+    background: rgba(0, 0, 0, 0.36);
 }	
 
 .flex-column li.nav-item>.nav-link:hover {
-    background: #eee;
+    background: rgba(0,123,255,.25);
 }
-
+li.nav-item>.nav-link.active:hover {
+    background: #77c9d4;
+}
 li.nav-item>.nav-link.active {
-    background: #eee;
+    background: #77c9d4;
     color: #000;
     font-weight: 800;
     cursor: auto;
@@ -97,7 +97,6 @@ a.d-flex.align-items-center.text-muted{
     padding: 15px 10px;
     position: relative;
     /* background: #121418; */
-    background: #2f353a;
 }
 .profile .profile-image {
     float: left;
@@ -136,7 +135,7 @@ a.d-flex.align-items-center.text-muted{
     border-radius: 20%;
 }
 .navbar-dark{
-    background: #292b2c;
+    background: #61bc8c;
     padding-left: 0px;
     margin-left: 0px;
     padding-top: 0px;
@@ -209,9 +208,8 @@ a.navbar-brand.col-sm-3.col-md-2.mr-0.titulo {
     height: 100%;
     padding: 0px;
     margin: 0px;
-    margin-top: -10px;
     text-align: left;
-    line-height: 50px;
+    line-height: 45px;
     padding-left: 20px;
 }
 a#userDropdown{
@@ -231,4 +229,19 @@ nav.col-md-2.d-none.d-md-block.bg-light.sidebar {
     padding: 15px 10px;
     position: relative;
     background: #848484;
+}
+li.xn-profile{
+    background: #015249;
+    box-shadow: 1px 0px 4px 0px #000;
+}
+.thead-gris{
+    background-color: #E4DFD9;
+}
+.fa.distancia{
+    position: relative;
+    left: 25%;
+}
+.navbar.dropdown.pull-right{
+    padding-left: 0px;
+    padding-top: 0px;
 }
